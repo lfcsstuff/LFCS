@@ -1,0 +1,166 @@
+########################
+                       #
+ LFCS Homework Tasks   #
+                       #
+########################
+
+See product documentation:
+
+RHEL 7 System Administrator's Guide
+
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/index.html
+
+Common Administrative Commands in Red Hat Enterprise LinuxTraining
+https://access.redhat.com/articles/1189123
+
+
+
+
+
+Tasks:
+
+
+######################################
+                                     #
+User creation and group management   #
+                                     #
+######################################
+
+Create five users
+
+Create group named "project"
+
+Add the five users to the group named "Project"
+
+Set the password for all five user accounts to expire in one month
+
+Change the password for two of the users.
+
+
+######################################
+                                     #
+Directory and file permissions       #
+                                     #
+######################################
+
+
+Create directory /home/projects
+
+Change the group for directory /home/projects so that it belongs to the  "projects"
+
+Change permissions on /home/projects so that it has read/write access to any user in the group "projects"
+Change permissions on /home/projects so that it is not available to any other users.
+Change the owner of the /home/projects user to one of the five users created
+
+####################################
+                                   # 
+sudo                               # 
+                                   #   
+####################################
+
+Allow all users in the projects group to have root access using sudo
+do this via the visudo utility
+
+Use sudo to obtain an interactive root shell.
+
+#############################################
+Basic Process Management                    #
+#############################################
+
+
+Use the 'top' utility to view all of the running processes on the system
+kill all of the bash processes. This might log you out of the system. Why is this?
+Reduce the priority of a process
+Increase the priority of a process
+
+
+#######################
+Hostname and timezone #
+#######################
+
+
+use hostnamectl to set the hostname of the system to LinuxTraining
+
+Change the timezone to Europe/Riga
+
+Synchronise the system time with the remote NTP server 3.lv.pool.ntp.org
+
+
+
+
+########################
+                       #
+Package Management     #
+                       #
+########################
+
+* Upgrade all packages which exist on the system using yum
+
+* Install the package 'tmux'
+* Remove the package 'tmux'
+
+* Find which installed package has provided the following files using the rpm utility
+/usr/bin/grep
+/usr/bin/yum
+/usr/bin/ls
+
+download the following package using wget
+
+https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-alpha.14/powershell-6.0.0_alpha.14-1.el7.centos.x86_64.rpm
+
+Install the package using the rpm utility
+
+This package requires a prerequisite package. Find out how to resolve this dependency issue by installing the prerequisite.
+
+Use yum to find which package provides the following file: nmap
+
+
+############################
+                           #  
+Backup using tar and gzip  #
+                           #
+############################
+
+Backup all files on the system to the directory /home/backup/backup.tar using the tar utility
+Preserve all permissions for files
+Compress the /home/backup/backup.tar using gzip
+
+-----
+
+#########################################
+                                        #
+Using Cron the schedule automatic jobs  #
+                                        #
+#########################################
+
+
+Schedule an automatic backup job using cron which backs up all the files to /home/backup/backup.tar 
+
+###########################################
+                                          #
+Basic Service Management                  #
+                                          #
+###########################################
+
+
+
+Install the package: epel-release
+Install the package: docker
+
+Start the docker service using: systemctl start docker
+Use systemctl to observe if docker.service is running
+
+change directory to /etc/systemd/system
+View the different runlevels and targets available
+change directory to /etc/systemd/system/multi-user.target.wants
+
+stop docker.service from running using systemctl
+
+Create a symlink between /usr/lib/systemd/system/docker.service and /etc/systemd/system/multi-user.target.wants/docker.service
+
+disable the docker service from starting automatically at system startup
+
+
+
+
+
